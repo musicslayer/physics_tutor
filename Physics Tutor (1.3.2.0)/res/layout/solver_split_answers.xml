@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+android:id="@+id/LinearLayout01" 
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent" 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+android:orientation="vertical">
+	
+	<LinearLayout 
+	android:id="@+id/LinearLayoutZ" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="vertical">
+		
+			<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="horizontal">
+		
+			<Button
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="ANSWER FIELDS"
+			android:id="@+id/Button_Answers"/>
+			
+			<Button
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="CONSTANT VALUES"
+			android:id="@+id/Button_Constants"/>
+		</LinearLayout>
+	
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="Answer Fields:"
+			android:id="@+id/TextView_Display"/>
+		</LinearLayout>
+		
+	
+		<ScrollView 
+		android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/ScrollView_Answers">
+        
+        <HorizontalScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+         
+		<TableLayout
+		android:id="@+id/Table"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:padding="1dp"
+		android:background="@drawable/border">
+		<TableRow
+		android:id="@+id/Row1">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable1"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable1"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA1_0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="SOLVE" 
+			android:id="@+id/Button_Variable1"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer1"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA2_0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+		</TableRow>
+		<TableRow
+		android:id="@+id/Row2">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable2"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable2"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA1_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="SOLVE" 
+			android:id="@+id/Button_Variable2"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer2"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA2_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+		</TableRow>
+		<TableRow
+		android:id="@+id/Row3">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable3"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable3"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA1_2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="SOLVE" 
+			android:id="@+id/Button_Variable3"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer3"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA2_2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+		</TableRow>
+		<TableRow
+		android:id="@+id/Row4">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable4"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable4"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA1_3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="SOLVE" 
+			android:id="@+id/Button_Variable4"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer4"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA2_3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+		</TableRow>
+		<TableRow
+		android:id="@+id/Row5">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable5"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable5"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA1_4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="SOLVE" 
+			android:id="@+id/Button_Variable5"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer5"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA2_4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+		</TableRow>
+		<TableRow
+		android:id="@+id/Row6">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable6"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable6"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA1_5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="SOLVE" 
+			android:id="@+id/Button_Variable6"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer6"/>
+			
+			<Spinner 
+			android:id="@+id/SpinnerA2_5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true"/>
+		</TableRow>
+		</TableLayout>
+		</HorizontalScrollView>
+		</ScrollView>
+		
+		<ScrollView 
+		android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/ScrollView_Constants">
+        
+        <HorizontalScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+        
+        <TextView 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"  
+		android:id="@+id/TextView_Constants"
+		android:background="@drawable/border"/>
+        
+        </HorizontalScrollView>
+		</ScrollView>
+	</LinearLayout>
+</LinearLayout>

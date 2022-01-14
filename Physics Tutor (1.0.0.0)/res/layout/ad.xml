@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>  
+  <LinearLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"  
+  xmlns:myapp="http://schemas.android.com/apk/res/com.androidbook.physicstutor"  
+  android:id="@+id/LinearLayout01" 
+  android:orientation="vertical"  
+  android:layout_width="fill_parent"  
+  android:layout_height="fill_parent"> 
+ 
+ <TextView android:text="Click the ad to proceed or wait 40 seconds and click the button." 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/message" 
+	android:textSize="10pt">
+	</TextView>
+ 
+  <com.admob.android.ads.AdView  
+	android:id="@+id/adr" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	myapp:backgroundColor="#000000"  
+	myapp:primaryTextColor="#FFFFFF"  
+	myapp:secondaryTextColor="#CCCCCC" 
+	myapp:refreshInterval="60"
+	android:visibility="visible"/> 
+	
+
+	
+	<TextView android:text="" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/diff" 
+	android:textSize="10pt">
+	</TextView>
+	
+	
+	<Button 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/Button_date" 
+	android:text="Proceed">
+	</Button>
+	 
+ 
+</LinearLayout> 

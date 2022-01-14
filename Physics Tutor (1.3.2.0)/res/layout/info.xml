@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>  
+
+<ScrollView 
+xmlns:android="http://schemas.android.com/apk/res/android"  
+xmlns:myapp="http://schemas.android.com/apk/res/com.musicslayer.physicstutor"  
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+	
+<LinearLayout 
+android:orientation="vertical"  
+android:layout_width="fill_parent"  
+android:layout_height="fill_parent"> 
+ 
+ 	<ImageView 
+	android:id="@+id/ImageView_Helper" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:adjustViewBounds="true"/>
+ 
+	<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/TextView_Description"/>
+	
+	<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/TextView_Constants"/>
+	
+	<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/TextView_Notes"/>
+	
+	<Button 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/Button_Proceed" 
+	android:text="PROCEED">
+	</Button>
+	 
+</LinearLayout> 
+</ScrollView>

@@ -1,0 +1,40 @@
+ if ("PROJECTILE".equals(type)) {
+            return "Constant g = "+String.format("%.4f", constant_g)+" m/s^2" +
+                "\nPeak y-position = "+String.format("%.4f",peak)+ " m" +
+                "\nx-velocity = "+String.format("%.4f",k3)+ " m/s";
+        }
+        else if ("VECTORS".equals(type)) {
+            return "Resultant Vector:\n    Magnitude = "+String.format("%.4f",Math.sqrt(v1*v1+v2*v2))+" N\n    Angle = "+String.format("%.4f",Math.atan2(v2,v1))+" Radians\n    X-component = "+String.format("%.4f",v1)+" N\n    Y-component = "+String.format("%.4f",v2)+" N" +
+                "\nEquilibrant Vector:\n    Magnitude = "+String.format("%.4f",Math.sqrt(v1*v1+v2*v2))+" N\n    Angle = "+String.format("%.4f",Math.atan2(-v2,-v1))+" Radians\n    X-component = "+String.format("%.4f",-v1)+" N\n    Y-component = "+String.format("%.4f",-v2)+" N";
+        }
+        else if ("INCLINE_SIMPLE".equals(type)) {
+            return "Constant g = "+String.format("%.4f", constant_g)+" m/s^2" +
+                "\nAngle of incline = "+String.format("%.4f",v1)+ " radians or "+String.format("%.4f",v1*57.295779513082320876798154814105)+" degrees" +
+                "\nMass of object = "+String.format("%.4f",v2)+ " kg" +
+                "\nForce of gravity parallel to incline = "+String.format("%.4f",-v3)+ " N" +
+                "\nNormal force = -force of gravity perpendicular to incline = "+String.format("%.4f",v4)+ " N" +
+                "\nMaximum force of static friction = "+String.format("%.4f",v5)+ " N" +
+                "\nCoefficient of static friction = "+String.format("%.4f",v6)+
+                "\nForce of kinetic friction = "+String.format("%.4f",v7)+ " N" +
+                "\nCoefficient of kinetic friction = "+String.format("%.4f",v8) +
+                "\nNet force along incline (if sliding downward) = "+String.format("%.4f",-(v3-v7))+ " N" +
+                "\nNet acceleration along incline (if sliding downward) = "+String.format("%.4f",-(v3-v7)/v2)+ " m/s^2";
+        }
+        else if ("INCLINE".equals(type)) {
+            return "Constant g = "+String.format("%.4f", constant_g)+" m/s^2" +
+                "\nPeak s-position = "+String.format("%.4f",peakS)+ " m at time = "+String.format("%.4f",peakTime)+" s" +
+                "\nAngle of incline = "+String.format("%.4f",angle)+ " radians or "+String.format("%.4f",angle*57.295779513082320876798154814105)+" degrees";
+        }
+        else if ("SPRING_SIMPLE".equals(type)) {
+            return "Spring constant = "+String.format("%.4f", v1)+" N/m" +
+                "\nEquilibrium position = "+String.format("%.4f",v2)+ " m";
+        }
+        else if ("SPRING".equals(type)) {
+            return "Mass = "+String.format("%.4f", v1)+" kg" +
+                "\nSpring constant = "+String.format("%.4f", v2)+" N/m" +
+                "\nAngular frequency = "+String.format("%.4f",v3)+ " Hz" +
+                "\nAmplitude = "+String.format("%.4f",v4)+ " m" +
+                "\nTime shift = "+String.format("%.4f",v5)+" + "+String.format("%.4f",2*Math.PI/v3)+"N seconds, N is any integer" +
+                "\nPhase shift = "+String.format("%.4f",v7)+" + "+String.format("%.4f",2*Math.PI)+"N radians, N is any integer" +
+                "\nTotal energy = "+String.format("%.4f",v6)+ " J";
+        }

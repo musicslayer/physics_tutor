@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string-array name="gravity">
+        <item>9.8</item>
+        <item>10</item>
+        <item>OTHER</item>
+</string-array>
+
+</resources>

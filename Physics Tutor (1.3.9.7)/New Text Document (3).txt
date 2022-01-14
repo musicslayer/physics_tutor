@@ -1,0 +1,41 @@
+if ("PROJECTILE".equals(type)) {
+            return "Constant g = "+String.format("%.4f", constant_g/factorA3[0])+" "+SunitA3[0] +
+                "\nPeak y-position = "+String.format("%.4f",peak/factorA3[1])+ " "+SunitA3[1] +
+                "\nx-velocity = "+String.format("%.4f",k3/factorA3[2])+ " "+SunitA3[2];
+        }
+        else if ("VECTORS".equals(type)) {
+            return "Resultant Vector:\n    Magnitude = "+String.format("%.4f",Math.sqrt(v1*v1+v2*v2)/factorA3[0])+" "+SunitA3[0]+"\n    Angle = "+String.format("%.4f",Math.atan2(v2,v1)/factorA3[1])+" "+SunitA3[1]+"\n    X-component = "+String.format("%.4f",v1/factorA3[2])+" "+SunitA3[2]+"\n    Y-component = "+String.format("%.4f",v2/factorA3[3])+" "+SunitA3[3]+"" +
+                "\nEquilibrant Vector:\n    Magnitude = "+String.format("%.4f",Math.sqrt(v1*v1+v2*v2)/factorA3[4])+" "+SunitA3[4]+"\n    Angle = "+String.format("%.4f",Math.atan2(-v2,-v1)/factorA3[5])+" "+SunitA3[5]+"\n    X-component = "+String.format("%.4f",-v1/factorA3[6])+" "+SunitA3[6]+"\n    Y-component = "+String.format("%.4f",-v2/factorA3[7])+" "+SunitA3[7]+"";
+        }
+        else if ("INCLINE_SIMPLE".equals(type)) {
+            return "Constant g = "+String.format("%.4f", constant_g/factorA3[0])+" "+SunitA3[0] +
+                "\nAngle of incline = "+String.format("%.4f",v1/factorA3[1])+ " "+SunitA3[1] +
+                "\nMass of object = "+String.format("%.4f",v2/factorA3[2])+ " "+SunitA3[2] +
+                "\nForce of gravity parallel to incline = "+String.format("%.4f",-v3/factorA3[3])+ " "+SunitA3[3] +
+                "\nNormal force = -force of gravity perpendicular to incline = "+String.format("%.4f",v4/factorA3[4])+ " "+SunitA3[4] +
+                "\nMaximum force of static friction = "+String.format("%.4f",v5/factorA3[5])+ " "+SunitA3[5] +
+                "\nCoefficient of static friction = "+String.format("%.4f",v6/factorA3[6])+
+                "\nForce of kinetic friction = "+String.format("%.4f",v7/factorA3[7])+ " "+SunitA3[7] +
+                "\nCoefficient of kinetic friction = "+String.format("%.4f",v8/factorA3[8]) +
+                "\nNet force along incline (if sliding downward) = "+String.format("%.4f",-(v3-v7)/factorA3[9])+ " "+SunitA3[9] +
+                "\nNet acceleration along incline (if sliding downward) = "+String.format("%.4f",-(v3-v7)/v2/factorA3[10])+ " "+SunitA3[10];
+        }
+        else if ("INCLINE".equals(type)) {
+            return "Constant g = "+String.format("%.4f", constant_g/factorA3[0])+" "+SunitA3[0] +
+                "\nPeak s-position = "+String.format("%.4f",peakS/factorA3[1])+ " "+SunitA3[1] +
+                "\nPeak time = "+String.format("%.4f",peakTime/factorA3[2])+" "+SunitA3[2] +
+                "\nAngle of incline = "+String.format("%.4f",angle/factorA3[3])+ " "+SunitA3[3];
+        }
+        else if ("SPRING_SIMPLE".equals(type)) {
+            return "Spring constant = "+String.format("%.4f", v1/factorA3[0])+" "+SunitA3[0] +
+                "\nEquilibrium position = "+String.format("%.4f",v2/factorA3[1])+ " "+SunitA3[1];
+        }
+        else if ("SPRING".equals(type)) {
+            return "Mass = "+String.format("%.4f", v1/factorA3[0])+" "+SunitA3[0] +
+                "\nSpring constant = "+String.format("%.4f", v2/factorA3[1])+" "+SunitA3[1] +
+                "\nAngular frequency = "+String.format("%.4f",v3/factorA3[2])+ " "+SunitA3[2] +
+                "\nAmplitude = "+String.format("%.4f",v4/factorA3[3])+ " "+SunitA3[3] +
+                "\nTime shift = "+String.format("%.4f",v5/factorA3[4])+" + "+String.format("%.4f",(2*Math.PI/v3)/factorA3[4])+"N "+SunitA3[4]+", N is any integer" +
+                "\nPhase shift = "+String.format("%.4f",v7/factorA3[5])+" + "+String.format("%.4f",(2*Math.PI)/factorA3[5])+"N "+SunitA3[5]+", N is any integer" +
+                "\nTotal energy = "+String.format("%.4f",v6/factorA3[6])+ " "+SunitA3[6];
+        }

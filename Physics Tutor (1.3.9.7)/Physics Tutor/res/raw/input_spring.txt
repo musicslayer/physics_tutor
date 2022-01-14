@@ -1,0 +1,46 @@
+S3
+C3-14-CATEGORY 1: SPRING INFORMATION
+P2-Mass and spring constant.
+Mass:
+mass
+Spring Constant:
+springconstant
+P2-Mass and angular frequency of oscillation.
+Mass:
+mass
+Angular Frequency:
+frequency
+P2-Spring constant and angular frequency of oscillation.
+Spring Constant:
+springconstant
+Angular Frequency:
+frequency
+C2-13-CATEGORY 2: FUNCTION PREFERENCE
+P0-Displacement is a COSINE function.
+P0-Displacement is a SINE function.
+C5-14-CATEGORY 3: WAVE INFORMATION
+P2-Initial displacement and velocity.
+Displacement:
+length
+Velocity:
+velocity
+P2-Amplitude of oscillation and time offset.
+Amplitude:
+length
+Time Offset:
+time
+P2-Amplitude of oscillation and phase shift.
+Amplitude:
+length
+Phase Shift:
+angle
+P2-Total energy of system and time offset.
+Energy:
+energy
+Time Offset:
+time
+P2-Total energy of system and phase shift.
+Energy:
+energy
+Phase Shift:
+angle

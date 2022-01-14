@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/LinearLayout01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical">
+
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <Button
+        android:id="@+id/Button_Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="RESET"
+        android:textSize="22dp"
+        android:enabled="false"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:text="Which solver do you feel\nis most useful?"/>
+    </LinearLayout>
+
+    <TextView
+    android:id="@+id/TextView_Message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14dp"
+    android:text="Thank you for your feedback.\nClick RESET to change your response."
+    android:visibility="invisible"/>
+
+    <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+            <Button
+            android:id="@+id/Button_Choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Projectile"
+            android:textSize="22dp"/>
+
+            <Button
+            android:id="@+id/Button_Choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Resultant Vectors"
+            android:textSize="22dp"/>
+
+            <Button
+            android:id="@+id/Button_Choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Incline (Simple)"
+            android:textSize="22dp"/>
+
+            <Button
+            android:id="@+id/Button_Choice4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Incline"
+            android:textSize="22dp"/>
+
+            <Button
+            android:id="@+id/Button_Choice5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Spring (Simple)"
+            android:textSize="22dp"/>
+
+            <Button
+            android:id="@+id/Button_Choice6"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Spring"
+            android:textSize="22dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

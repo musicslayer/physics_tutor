@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+android:id="@+id/LinearLayout01" 
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent" 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+android:orientation="vertical">
+
+	<LinearLayout 
+	android:id="@+id/LinearLayoutY" 
+	android:layout_width="260dp"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"  
+	android:id="@+id/TextView_Case"/>
+	
+	<TextView 
+	android:id="@+id/Constants"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+    />
+    
+    <TextView 
+	android:id="@+id/Info"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+    />
+
+	<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/TextView_Step"/>
+
+	<LinearLayout 
+	android:id="@+id/LinearLayout02" 
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal">
+
+	<Button 
+	android:layout_width="120dp" 
+	android:layout_height="50dp" 
+	android:text="Previous" 
+	android:id="@+id/Button_Previous"/>
+
+	<Button 
+	android:layout_width="120dp" 
+	android:layout_height="50dp" 
+	android:text="Next" 
+	android:id="@+id/Button_Next"/>
+	
+	</LinearLayout>
+	</LinearLayout>
+	
+	<ScrollView 
+	android:id="@+id/ScrollView01" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	
+	
+	<LinearLayout 
+		android:id="@+id/LinearLayoutZ" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+		
+		<ImageView 
+	android:id="@+id/ImageView_Helper" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"/>
+	
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="Answer fields:"/>
+	
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="horizontal">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable1"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable1"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="Solve" 
+			android:id="@+id/Button_Variable1"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer1"/>
+		</LinearLayout>
+		
+		
+		<LinearLayout 
+		android:id="@+id/LinearLayout03" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="horizontal">
+		
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable2"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable2"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="Solve" 
+			android:id="@+id/Button_Variable2"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer2"/>
+		</LinearLayout>
+		
+		<LinearLayout 
+		android:id="@+id/LinearLayout04" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="horizontal">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable3"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable3"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="Solve" 
+			android:id="@+id/Button_Variable3"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer3"/>
+		</LinearLayout>
+		
+		<LinearLayout 
+		android:id="@+id/LinearLayout05" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="horizontal">
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Variable4"/>
+			
+			<EditText 
+			android:id="@+id/EditText_Variable4"
+			android:layout_height="wrap_content" 
+			android:layout_width="80dp"/>
+			
+			<Button 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:text="Solve" 
+			android:id="@+id/Button_Variable4"/>
+			
+			<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:id="@+id/TextView_Answer4"/>
+		</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

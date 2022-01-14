@@ -1,0 +1,51 @@
+S2
+C1-14:POSITION
+P4-X-position and Y-position at specific (but perhaps different) times.
+X-position:
+length
+Time:
+time
+Y-position:
+length
+Time:
+time
+C5-14:VELOCITY
+P3-Magnitude of overall velocity and angle at specific (same) time.
+Velocity:
+velocity
+Angle:
+angle
+Time:
+time
+P3-X-velocity (constant) and angle at specific time.
+X-Velocity:
+velocity
+Angle:
+angle
+Time:
+time
+P4-Y-velocity and angle at specific (but perhaps different) times.
+Y-Velocity:
+velocity
+Time:
+time
+Angle:
+angle
+Time:
+time
+P3-X-velocity (constant) and Y-velocity at specific time.
+X-Velocity:
+velocity
+Y-Velocity:
+velocity
+Time:
+time
+P4-Another X-position and Y-position at specific (but perhaps different) times (Both must be different than those used in category 1).
+X-position:
+length
+Time:
+time
+Y-position:
+length
+Time:
+time

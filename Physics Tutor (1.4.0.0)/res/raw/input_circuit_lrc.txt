@@ -1,0 +1,29 @@
+S4
+C1-14:VOLTAGE
+P1-Ideal constant voltage source (no internal resistance) that is "turned on" at t=0 s and remains on forever.
+Voltage:
+voltage
+C2-14:RESISTANCE
+P0-There is no resistor.
+P1-Ideal resistor with constant resistance.
+Resistance:
+resistance
+C3-14:CAPACITANCE
+P0-There is no capacitor.
+P2-Ideal capacitor with constant capacitance and initial charge.
+Capacitance:
+capacitance
+Initial Charge:
+charge
+P2-Ideal capacitor with constant capacitance and initial voltage.
+Capacitance:
+capacitance
+Initial Voltage:
+voltage
+C2-14:INDUCTANCE
+P0-There is no inductor.
+P2-Ideal inductor with constant inductance.
+Inductance:
+inductance
+Initial Current:
+current

@@ -1,0 +1,421 @@
+    private CustomLinearLayout makeSplitSolver() {
+        final CustomButton B_ViewExplanation, B_ViewAnswers;
+
+        L1=new CustomLinearLayout(this,-1,-1,1);
+
+        B_ViewExplanation=new CustomButton(this,250,200,"EXPLANATION",32);
+        B_ViewExplanation.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                split=true;
+                s=1;
+                MAIN=makeSplitSolverExplanation();
+                setContentView(MAIN);
+
+                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+                {
+                    MAIN.setOrientation(0);
+                }
+                else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+                {
+                    MAIN.setOrientation(1);
+                }
+            }
+        });
+
+        B_ViewAnswers=new CustomButton(this,250,200,"ANSWERS",32);
+        B_ViewAnswers.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                split=true;
+                MAIN=makeSplitSolverAnswers();
+                setContentView(MAIN);
+
+                if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+                {
+                    MAIN.setOrientation(0);
+                }
+                else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+                {
+                    MAIN.setOrientation(1);
+                }
+            }
+        });
+
+        L1.addView(B_ViewExplanation);
+        L1.addView(B_ViewAnswers);
+
+        return L1;
+    }
+
+    private CustomLinearLayout makeSplitSolverExplanation() {
+        L1=new CustomLinearLayout(this,-1,-1,1);
+        LA=new CustomLinearLayout(this,260,260,1);
+        LAA=new CustomLinearLayout(this,-2,-2,0);
+
+        B_Prev=new CustomButton(this,120,50,"PREVIOUS",20);
+        B_Prev.setEnabled(false);
+        B_Prev.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (s>1)
+                {
+                    if (--s==1){B_Prev.setEnabled(false);}
+                    B_Next.setEnabled(true);
+                    T_Step.setText("Step "+Integer.toString(s)+":\n"+instructions[s]);
+                    I_Helper.setImageResource(helperImage[s]);
+                }
+            }
+        });
+
+        B_Next=new CustomButton(this,120,50,"NEXT",20);
+        if (stotal==1){B_Next.setEnabled(false);}
+        B_Next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (s<stotal)
+                {
+                    if (++s==stotal){B_Next.setEnabled(false);}
+                    B_Prev.setEnabled(true);
+                    T_Step.setText("Step "+Integer.toString(s)+":\n"+instructions[s]);
+                    I_Helper.setImageResource(helperImage[s]);
+                }
+            }
+        });
+
+        LAA.addView(B_Prev);
+        LAA.addView(B_Next);
+
+        S_Exp=new CustomScrollView(this,-1,-1);
+
+        T_Step=new CustomTextView(this,14);
+        T_Step.setText("Step 1:\n" + instructions[1]);
+
+        S_Exp.addView(T_Step);
+
+        LA.addView(LAA);
+        LA.addView(S_Exp);
+
+        LB=new CustomLinearLayout(this,-1,-1,1);
+        LBA=new CustomLinearLayout(this,-1,-2,1);
+        LBAA=new CustomLinearLayout(this,-1,-2,0);
+
+        B_Pictures1=new CustomButton(this,150,50,"PICTURES",14);
+        B_Pictures1.setEnabled(false);
+        B_Pictures1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                B_Pictures1.setEnabled(false);
+                B_Constants1.setEnabled(true);
+                T_Display1.setVisibility(8);
+                S_Pictures1.setVisibility(0);
+                S_Constants1.setVisibility(8);
+            }
+        });
+
+        B_Constants1=new CustomButton(this,150,50,"CONSTANT VALUES",14);
+        B_Constants1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                B_Pictures1.setEnabled(true);
+                B_Constants1.setEnabled(false);
+                T_Display1.setVisibility(0);
+                T_Display1.setText("Constant Values:");
+                S_Pictures1.setVisibility(8);
+                S_Constants1.setVisibility(0);
+            }
+        });
+
+        LBAA.addView(B_Pictures1);
+        LBAA.addView(B_Constants1);
+
+        T_Display1=new CustomTextView(this,14);
+        T_Display1.setVisibility(8);
+
+        LBA.addView(LBAA);
+        LBA.addView(T_Display1);
+
+        S_Pictures1=new CustomScrollView(this,-1,-1);
+
+        I_Helper=new ZoomCustomImageView(this,-2,-2,helperImage[1]);
+        I_Helper.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                setContentView(I_Helper.fullScreen());
+                seeImage=true;
+            }
+        });
+
+        S_Pictures1.addView(I_Helper);
+
+        S_Constants1=new CustomScrollView(this,-1,-1);
+        S_Constants1.setVisibility(8);
+
+        H_Constants=new CustomHorizontalScrollView(this,-1,-1);
+
+        T_Constants=new CustomTextView(this,14);
+        T_Constants.setPadding(dpToPx((int)(5*scale)),dpToPx((int)(5*scale)),dpToPx((int)(5*scale)),dpToPx((int)(5*scale)));
+        T_Constants.setBackgroundResource(R.drawable.border);
+        assignConstants();
+
+        H_Constants.addView(T_Constants);
+        S_Constants1.addView(H_Constants);
+
+        LB.addView(LBA);
+        LB.addView(S_Pictures1);
+        LB.addView(S_Constants1);
+
+        L1.addView(LA);
+        L1.addView(LB);
+
+        return L1;
+    }
+
+    private CustomLinearLayout makeSplitSolverAnswers() {
+        L1=new CustomLinearLayout(this,-1,-1,1);
+        LB=new CustomLinearLayout(this,-1,-1,1);
+        LBA=new CustomLinearLayout(this,-1,-2,1);
+        LBAA=new CustomLinearLayout(this,-1,-2,0);
+
+        B_Answers2=new CustomButton(this,150,50,"ANSWER FIELDS",14);
+        B_Answers2.setEnabled(false);
+        B_Answers2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                B_Answers2.setEnabled(false);
+                B_Constants2.setEnabled(true);
+                if ("VECTORS".equals(type) || "INCLINE_SIMPLE".equals(type))
+                {
+                    T_Display2.setText("Answer Fields:\nThis problem does not have any answer fields.");
+                }
+                else
+                {
+                    T_Display2.setText("Answer Fields:\nEnter the value of any variable to get the rest.");
+                    S_Answers2.setVisibility(0);
+                }
+                S_Constants2.setVisibility(8);
+            }
+        });
+
+        B_Constants2=new CustomButton(this,150,50,"CONSTANT VALUES",14);
+        B_Constants2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                B_Answers2.setEnabled(true);
+                B_Constants2.setEnabled(false);
+                T_Display2.setText("Constant Values:");
+                S_Answers2.setVisibility(8);
+                S_Constants2.setVisibility(0);
+            }
+        });
+
+        LBAA.addView(B_Answers2);
+        LBAA.addView(B_Constants2);
+
+        T_Display2=new CustomTextView(this,14);
+
+        LBA.addView(LBAA);
+        LBA.addView(T_Display2);
+        S_Answers2=new CustomScrollView(this,-1,-1);
+        H_Answers=new CustomHorizontalScrollView(this,-1,-1);
+        Table_Answers=new TableLayout(this);
+        Table_Answers.setPadding(5,5,5,5);
+        Table_Answers.setBackgroundResource(R.drawable.border);
+        makeAnswersTable();
+        Table_Answers.setOnTouchListener(new View.OnTouchListener() {
+			public boolean onTouch(View v, MotionEvent event) {
+                for (r=0;r<numR;r++)
+                {
+				    E_varInput[r].setFocusableInTouchMode(false);
+                }
+                for (r=0;r<numR;r++)
+                {
+                    E_varInput[r].clearFocus();
+                }
+				return false;
+			}
+        });
+
+        H_Answers.addView(Table_Answers);
+        S_Answers2.addView(H_Answers);
+
+        S_Constants2=new CustomScrollView(this,-1,-1);
+        S_Constants2.setVisibility(8);
+        H_Constants=new CustomHorizontalScrollView(this,-1,-1);
+
+        T_Constants=new CustomTextView(this,14);
+        T_Constants.setPadding(dpToPx((int)(5*scale)),dpToPx((int)(5*scale)),dpToPx((int)(5*scale)),dpToPx((int)(5*scale)));
+        T_Constants.setBackgroundResource(R.drawable.border);
+        assignConstants();
+
+        H_Constants.addView(T_Constants);
+        S_Constants2.addView(H_Constants);
+
+        LB.addView(LBA);
+        LB.addView(S_Answers2);
+        LB.addView(S_Constants2);
+
+        L1.addView(LB);
+
+        if ("VECTORS".equals(type) || "INCLINE_SIMPLE".equals(type)) {
+        	T_Display2.setText("Answer Fields:\nThis problem does not have any answer fields.");
+        	S_Answers2.setVisibility(8);
+    	}
+    	else
+    	{
+    		T_Display2.setText("Answer Fields:\nEnter the value of any variable to get the rest.");
+    		S_Answers2.setVisibility(0);
+    	}
+
+        return L1;
+    }
+
+    private CustomLinearLayout makeSolver() {
+        final CustomLinearLayout L_Exp;
+
+        L1=new CustomLinearLayout(this,-1,-1,1);
+        LA=new CustomLinearLayout(this,260,260,1);
+        LAA=new CustomLinearLayout(this,-2,-2,0);
+
+        B_Prev=new CustomButton(this,120,50,"PREVIOUS",20);
+        B_Prev.setEnabled(false);
+        B_Prev.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (s>1)
+                {
+                    if (--s==1){B_Prev.setEnabled(false);}
+                    B_Next.setEnabled(true);
+                    T_Step.setText("Step "+Integer.toString(s)+":\n"+instructions[s]);
+                    I_Helper.setImageResource(helperImage[s]);
+                }
+            }
+        });
+
+        B_Next=new CustomButton(this,120,50,"NEXT",20);
+        if (stotal==1){B_Next.setEnabled(false);}
+        B_Next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (s<stotal)
+                {
+                    if (++s==stotal){B_Next.setEnabled(false);}
+                    B_Prev.setEnabled(true);
+                    T_Step.setText("Step "+Integer.toString(s)+":\n"+instructions[s]);
+                    I_Helper.setImageResource(helperImage[s]);
+                }
+            }
+        });
+
+        LAA.addView(B_Prev);
+        LAA.addView(B_Next);
+
+        S_Exp=new CustomScrollView(this,-1,-1);
+
+        L_Exp=new CustomLinearLayout(this,-1,-1,1);
+
+        T_Step=new CustomTextView(this,14);
+        T_Step.setText("Step 1:\n" + instructions[1]);
+        T_Step.setLayoutParams(new ViewGroup.LayoutParams(-2, -2));
+
+        I_Helper=new ZoomCustomImageView(this,-2,-2,helperImage[1]);
+        I_Helper.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                setContentView(I_Helper.fullScreen());
+                seeImage=true;
+            }
+        });
+
+        L_Exp.addView(T_Step);
+        L_Exp.addView(I_Helper);
+
+        S_Exp.addView(L_Exp);
+
+        LA.addView(LAA);
+        LA.addView(S_Exp);
+
+        LB=new CustomLinearLayout(this,-1,-1,1);
+        LBA=new CustomLinearLayout(this,-1,-2,1);
+        LBAA=new CustomLinearLayout(this,-1,-2,0);
+
+        B_Answers=new CustomButton(this,150,50,"ANSWER FIELDS",14);
+        B_Answers.setEnabled(false);
+        B_Answers.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                B_Answers.setEnabled(false);
+                B_Constants.setEnabled(true);
+                if ("VECTORS".equals(type) || "INCLINE_SIMPLE".equals(type))
+                {
+                    T_Display.setText("Answer Fields:\nThis problem does not have any answer fields.");
+                }
+                else
+                {
+                    T_Display.setText("Answer Fields:\nEnter the value of any variable to get the rest.");
+                    S_Answers.setVisibility(0);
+                }
+                S_Constants.setVisibility(8);
+            }
+        });
+
+        B_Constants=new CustomButton(this,150,50,"CONSTANT VALUES",14);
+        B_Constants.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                B_Answers.setEnabled(true);
+                B_Constants.setEnabled(false);
+                T_Display.setText("Constant Values:");
+                S_Answers.setVisibility(8);
+                S_Constants.setVisibility(0);
+            }
+        });
+
+        LBAA.addView(B_Answers);
+        LBAA.addView(B_Constants);
+
+        T_Display=new CustomTextView(this,14);
+
+        LBA.addView(LBAA);
+        LBA.addView(T_Display);
+
+        S_Answers=new CustomScrollView(this,-1,-1);
+        H_Answers=new CustomHorizontalScrollView(this,-1,-1);
+        Table_Answers=new TableLayout(this);
+        Table_Answers.setPadding(5,5,5,5);
+        Table_Answers.setBackgroundResource(R.drawable.border);
+        makeAnswersTable();
+        Table_Answers.setOnTouchListener(new View.OnTouchListener() {
+			public boolean onTouch(View v, MotionEvent event) {
+                for (r=0;r<numR;r++)
+                {
+				    E_varInput[r].setFocusableInTouchMode(false);
+                }
+                for (r=0;r<numR;r++)
+                {
+                    E_varInput[r].clearFocus();
+                }
+				return false;
+			}
+        });
+
+        H_Answers.addView(Table_Answers);
+        S_Answers.addView(H_Answers);
+
+        S_Constants=new CustomScrollView(this,-1,-1);
+        S_Constants.setVisibility(8);
+        H_Constants=new CustomHorizontalScrollView(this,-1,-1);
+
+        T_Constants=new CustomTextView(this,14);
+        T_Constants.setPadding(dpToPx((int)(5*scale)),dpToPx((int)(5*scale)),dpToPx((int)(5*scale)),dpToPx((int)(5*scale)));
+        T_Constants.setBackgroundResource(R.drawable.border);
+        assignConstants();
+
+        H_Constants.addView(T_Constants);
+        S_Constants.addView(H_Constants);
+
+        LB.addView(LBA);
+        LB.addView(S_Answers);
+        LB.addView(S_Constants);
+
+        L1.addView(LA);
+        L1.addView(LB);
+
+        if ("VECTORS".equals(type) || "INCLINE_SIMPLE".equals(type)) {
+        	T_Display.setText("Answer Fields:\nThis problem does not have any answer fields.");
+        	S_Answers.setVisibility(8);
+    	}
+    	else
+    	{
+    		T_Display.setText("Answer Fields:\nEnter the value of any variable to get the rest.");
+    		S_Answers.setVisibility(0);
+    	}
+
+        return L1;
+    }

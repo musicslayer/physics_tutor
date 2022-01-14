@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gravity">
+        <item>9.8</item>
+        <item>10</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="answer">
+        <item>"Answer Layout A"</item>
+        <item>"Answer Layout B"</item>
+    </string-array>
+
+    <string-array name="unit_length">
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>km</item>
+        <item>in</item>
+        <item>ft</item>
+    </string-array>
+
+    <string-array name="unit_time">
+        <item>s</item>
+        <item>ms</item>
+    </string-array>
+
+    <string-array name="unit_velocity">
+        <item>m/s</item>
+        <item>cm/s</item>
+        <item>mm/s</item>
+        <item>km/s</item>
+        <item>in/s</item>
+        <item>ft/s</item>
+    </string-array>
+
+    <string-array name="unit_angle">
+        <item>radians</item>
+        <item>degrees</item>
+    </string-array>
+
+    <string-array name="unit_mass">
+        <item>kg</item>
+        <item>g</item>
+    </string-array>
+
+    <string-array name="unit_force">
+        <item>N</item>
+        <item>lb</item>
+    </string-array>
+
+    <string-array name="unit_energy">
+        <item>J</item>
+    </string-array>
+
+    <string-array name="unit_frequency">
+        <item>Hz</item>
+    </string-array>
+
+    <string-array name="unit_acceleration">
+        <item>m/(s^2)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+android:id="@+id/LinearLayout01" 
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent" 
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout 
+android:id="@+id/LinearLayoutA" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="vertical"> 
+
+<LinearLayout 
+android:id="@+id/LinearLayout02" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="horizontal"> 
+	
+	<Button 
+	android:layout_width="120dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/TEST2" 
+	android:text="TEST"
+	></Button>
+	
+	<Button 
+	android:layout_width="120dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/Button_Solve" 
+	android:text="SOLVE"
+	android:enabled="false"
+	></Button>
+	
+</LinearLayout>
+	
+	<TextView 
+	android:id="@+id/TEST"
+	android:text="Test Results:" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:paddingBottom="20dp"/>
+    </LinearLayout>
+     
+     
+    <LinearLayout 
+android:id="@+id/LinearLayoutB" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="vertical"> 
+
+	<TextView 
+	android:id="@+id/Constants"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+    />
+
+    <TextView 
+	android:id="@+id/Instructions"
+	android:text="Fill in a complete page in every catagory." 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+    />
+
+    
+    <LinearLayout 
+android:id="@+id/LinearLayout02" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="horizontal"> 
+	
+	<Button 
+	android:layout_width="150dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/Button_catagory1" 
+	android:text="Category 1: POSITION"
+	></Button>
+	
+	<Button 
+	android:layout_width="150dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/Button_catagory2" 
+	android:text="Category 2: VELOCITY"
+	></Button>
+    
+    </LinearLayout>
+    
+
+    
+   <LinearLayout 
+android:id="@+id/LinearLayoutY" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:visibility="gone"> 
+
+	<LinearLayout 
+android:id="@+id/LinearLayoutR" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="horizontal"> 
+    <Button 
+	android:layout_width="50dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/P1_1" 
+	android:text="P.1"
+	></Button>
+	</LinearLayout>
+	
+	<ScrollView 
+	android:id="@+id/ScrollView01" 
+	android:layout_width="200dp" 
+	android:layout_height="wrap_content"
+	android:visibility="gone">
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+			<TextView 
+			android:id="@+id/TextView_1_1"
+			android:text="X-position and Y-position at specific (but perhaps different) times." 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+			
+			<TextView 
+			android:id="@+id/TextView_1_1_1"
+			android:text="X-position (meters):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_1_1_1"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_1_1_2"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_1_1_2"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_1_1_3"
+			android:text="Y-position (meters):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_1_1_3"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_1_1_4"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_1_1_4"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:layout_marginLeft="30dp"/>
+		</LinearLayout>
+	</ScrollView>
+	</LinearLayout>
+	
+	
+   <LinearLayout 
+android:id="@+id/LinearLayoutZ" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:visibility="gone"> 
+	<LinearLayout 
+	android:id="@+id/LinearLayoutR" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"> 
+    <Button 
+	android:layout_width="50dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/P2_1" 
+	android:text="P.1"
+	></Button>
+	<Button 
+	android:layout_width="50dp" 
+	android:layout_height="50dp" 
+	android:id="@+id/P2_2" 
+	android:text="P.2"
+	></Button>
+	<Button 
+	android:layout_width="50dp" 
+	android:layout_height="50dp"  
+	android:id="@+id/P2_3" 
+	android:text="P.3"
+	></Button>
+	<Button 
+	android:layout_width="50dp" 
+	android:layout_height="50dp"  
+	android:id="@+id/P2_4" 
+	android:text="P.4"
+	></Button>
+	</LinearLayout>
+	
+	<ScrollView 
+	android:id="@+id/ScrollView02_1" 
+	android:layout_width="200dp" 
+	android:layout_height="wrap_content"
+	android:visibility="gone"> 
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+		
+			<TextView 
+			android:id="@+id/TextView_2_1"
+			android:text="Magnitude of overall velocity and angle at specific (same) time." 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+		
+			<TextView 
+			android:id="@+id/TextView_2_1_1"
+			android:text="Velocity (meters/second):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_1_1"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_1_2"
+			android:text="Angle:" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+			
+			<ToggleButton android:id="@+id/ToggleButton_2_1_2"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textOn="Radians"
+        	android:textOff="Degrees"
+        	android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_1_2"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"
+			android:enabled="false"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_1_3"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_1_3"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+		</LinearLayout>
+	</ScrollView>
+	
+	<ScrollView 
+	android:id="@+id/ScrollView02_2" 
+	android:layout_width="200dp" 
+	android:layout_height="wrap_content"
+	android:visibility="gone">
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+		
+			<TextView 
+			android:id="@+id/TextView_2_2"
+			android:text="X-velocity (constant) and angle at specific time." 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_2_1"
+			android:text="X-velocity (meters/second):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_2_1"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_2_2"
+			android:text="Angle:" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+			
+			<ToggleButton android:id="@+id/ToggleButton_2_2_2"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textOn="Radians"
+        	android:textOff="Degrees"
+        	android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_2_2"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"
+			android:enabled="false"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_2_3"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_2_3"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+		</LinearLayout>
+	</ScrollView>
+	
+	<ScrollView 
+	android:id="@+id/ScrollView02_3" 
+	android:layout_width="200dp" 
+	android:layout_height="wrap_content"
+	android:visibility="gone">
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+		
+			<TextView 
+			android:id="@+id/TextView_2_3"
+			android:text="Y-velocity and angle at specific (but perhaps different) times." 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_3_1"
+			android:text="Y-velocity (meters/second):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_3_1"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_3_2"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_3_2"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_3_3"
+			android:text="Angle:" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+
+			<ToggleButton android:id="@+id/ToggleButton_2_3_3"
+        	android:layout_width="100dp"
+        	android:layout_height="wrap_content"
+        	android:textOn="Radians"
+        	android:textOff="Units"
+        	android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_3_3"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"
+			android:enabled="false"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_3_4"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_3_4"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+		</LinearLayout>
+	</ScrollView>
+	
+	<ScrollView 
+	android:id="@+id/ScrollView02_4" 
+	android:layout_width="200dp" 
+	android:layout_height="wrap_content"
+	android:visibility="gone">
+		<LinearLayout 
+		android:id="@+id/LinearLayout02" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+		
+			<TextView 
+			android:id="@+id/TextView_2_4"
+			android:text="X-velocity (constant) and Y-velocity at specific time." 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_4_1"
+			android:text="X-velocity (meters/second):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_4_1"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_4_2"
+			android:text="Y-velocity (meters/second):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_4_2"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+			<TextView 
+			android:id="@+id/TextView_2_4_3"
+			android:text="Time (seconds):" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="30dp"/>
+		
+			<EditText 
+			android:id="@+id/EditText_2_4_3"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_marginLeft="30dp"/>
+			
+		</LinearLayout>
+	</ScrollView>
+	</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

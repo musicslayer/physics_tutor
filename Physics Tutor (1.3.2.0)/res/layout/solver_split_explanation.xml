@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout 
+android:id="@+id/LinearLayout01" 
+android:layout_width="fill_parent" 
+android:layout_height="fill_parent" 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+android:orientation="vertical">
+
+	<LinearLayout 
+	android:id="@+id/LinearLayoutY" 
+	android:layout_width="260dp"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<LinearLayout 
+	android:id="@+id/LinearLayout02" 
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal">
+
+	<Button 
+	android:layout_width="120dp" 
+	android:layout_height="50dp" 
+	android:text="PREVIOUS" 
+	android:textSize="8pt"
+	android:id="@+id/Button_Previous"/>
+
+	<Button 
+	android:layout_width="120dp" 
+	android:layout_height="50dp" 
+	android:text="NEXT" 
+	android:textSize="8pt"
+	android:id="@+id/Button_Next"/>
+
+	</LinearLayout>
+
+	<ScrollView 
+	android:id="@+id/ScrollView01" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/TextView_Step"/>
+	</ScrollView>
+	</LinearLayout>
+	
+	
+	
+	
+	
+	<LinearLayout 
+		android:id="@+id/LinearLayoutZ" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:orientation="vertical"> 
+		
+		<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"  
+		android:orientation="horizontal">
+		
+			<Button
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="PICTURES"
+			android:id="@+id/Button_Pictures"/>
+			
+			<Button
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"  
+			android:text="CONSTANT VALUES"
+			android:id="@+id/Button_Constants"/>
+		</LinearLayout>
+		
+		<TextView 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"  
+		android:text="Constant Values:"
+		android:visibility="gone"
+		android:id="@+id/TextView_Display"/>
+		<ScrollView 
+	android:id="@+id/ScrollView_Pictures" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+		<ImageView 
+	android:id="@+id/ImageView_Helper" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:adjustViewBounds="true"/>
+		</ScrollView>
+		
+		<ScrollView 
+		android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:id="@+id/ScrollView_Constants">
+        
+        <HorizontalScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+        
+        <TextView 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"  
+		android:id="@+id/TextView_Constants"
+		android:background="@drawable/border"/>
+        
+        </HorizontalScrollView>
+		</ScrollView>
+		
+	</LinearLayout>
+	
+	
+
+</LinearLayout>

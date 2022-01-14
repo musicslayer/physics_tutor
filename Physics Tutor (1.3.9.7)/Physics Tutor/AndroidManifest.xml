@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.musicslayer.physicstutor"
+android:installLocation="auto"
+android:versionName="1.3.9.7"
+android:versionCode="18">
+
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="8"/>
+    <supports-screens android:largeScreens="true" android:xlargeScreens="true"/>
+
+    <application
+    android:label="Physics Tutor"
+    android:icon="@drawable/icon">
+
+        <activity android:name="PhysicsIntroActivity" android:configChanges="keyboard|keyboardHidden|orientation">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity>
+        <activity android:name="PhysicsConstantsActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsHelpActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsProblemsActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsSettingsActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsSolverActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsInputActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsInfoActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="PhysicsSurveyActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <activity android:name="com.crittercism.NotificationActivity" android:configChanges="keyboard|keyboardHidden|orientation"/>
+    </application>
+</manifest> 

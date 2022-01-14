@@ -1,0 +1,557 @@
+/*
+            B_Solve[0].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=0;
+                    try
+                    {
+                        temp=factorA1[0]*Double.valueOf(E_varInput[0].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*temp));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-(constant_g*((k1-temp)/constant_g)*((k1-temp)/constant_g))/2+k1*((k1-temp)/constant_g))+k2));
+                        T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*(k3*((k1-temp)/constant_g)+k4)));
+                        T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*((k1-temp)/constant_g)));
+                        T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*(Math.atan(temp/k3))));
+                        T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*(Math.sqrt(k3*k3+temp*temp))));
+                        enableDisableView(Table_Answers,false);
+                        RB.setEnabled(true);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[1].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=1;
+                    try
+                    {
+                        temp=factorA1[1]*Double.valueOf(E_varInput[1].getText().toString());
+                        temp1=(-k1+Math.sqrt((k1*k1)-4*(-constant_g/2)*(k2-temp)))/(-constant_g);
+                        temp2=(-k1-Math.sqrt((k1*k1)-4*(-constant_g/2)*(k2-temp)))/(-constant_g);
+                        if (temp<=peak)
+                        {
+                            T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(-constant_g*temp1+k1))+" or\n"+String.format("%.4f",(1/factorA2[0])*(-constant_g*temp2+k1)));
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*temp));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*(k3*temp1+k4))+" or\n"+String.format("%.4f",(1/factorA2[2])*(k3*temp2+k4)));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*temp1)+" or\n"+String.format("%.4f",(1/factorA2[3])*temp2));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*(Math.atan((-constant_g*temp1+k1)/k3)))+" or\n"+String.format("%.4f",(1/factorA2[4])*(Math.atan((-constant_g*temp2+k1)/k3))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*(Math.sqrt(k3*k3+(-constant_g*temp1+k1)*(-constant_g*temp1+k1)))));
+                        }
+                        else
+                        {
+                            T_varAnswer[0].setText("");
+                            T_varAnswer[1].setText("y(t) cannot exceed peak value.");
+                            T_varAnswer[2].setText("");
+                            T_varAnswer[3].setText("");
+                            T_varAnswer[4].setText("");
+                            T_varAnswer[5].setText("");
+                        }
+                        enableDisableView(Table_Answers,false);
+                        RB.setEnabled(true);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[2].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=2;
+                    try
+                    {
+                        temp=factorA1[2]*Double.valueOf(E_varInput[2].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(-constant_g*((temp-k4)/k3)+k1)));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-(constant_g*((temp-k4)/k3)*((temp-k4)/k3))/2+k1*((temp-k4)/k3)+k2)));
+                        T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp));
+                        T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*((temp-k4)/k3)));
+                        T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*(Math.atan((-constant_g*((temp-k4)/k3)+k1)/k3))));
+                        T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*(Math.sqrt(k3*k3+(-constant_g*((temp-k4)/k3)+k1)*(-constant_g*((temp-k4)/k3)+k1)))));
+                        enableDisableView(Table_Answers,false);
+                        RB.setEnabled(true);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[3].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=3;
+                    try
+                    {
+                        temp=factorA1[3]*Double.valueOf(E_varInput[3].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(-constant_g*temp+k1)));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-(constant_g*temp*temp)/2+k1*temp+k2)));
+                        T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*(k3*temp+k4)));
+                        T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*temp));
+                        T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*(Math.atan((-constant_g*temp+k1)/k3))));
+                        T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*(Math.sqrt(k3*k3+(-constant_g*temp+k1)*(-constant_g*temp+k1)))));
+                        enableDisableView(Table_Answers,false);
+                        RB.setEnabled(true);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[4].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=4;
+                    try
+                    {
+                        temp=factorA1[4]*Double.valueOf(E_varInput[4].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(k3*Math.tan(temp))));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-(constant_g*((k1-(k3*Math.tan(temp)))/constant_g)*((k1-(k3*Math.tan(temp)))/constant_g))/2+k1*((k1-(k3*Math.tan(temp)))/constant_g)+k2)));
+                        T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*(k3*((k1-(k3*Math.tan(temp)))/constant_g)+k4)));
+                        T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*((k1-(k3*Math.tan(temp)))/constant_g)));
+                        T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*temp));
+                        T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*(Math.sqrt(k3*k3+(k3*Math.tan(temp))*(k3*Math.tan(temp))))));
+                        enableDisableView(Table_Answers,false);
+                        RB.setEnabled(true);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[5].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=5;
+                    try
+                    {
+                        temp=factorA1[5]*Double.valueOf(E_varInput[5].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(Math.sqrt(temp*temp-k3*k3))));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-(constant_g*((k1-(Math.sqrt(temp*temp-k3*k3)))/constant_g)*((k1-(Math.sqrt(temp*temp-k3*k3)))/constant_g))/2+k1*((k1-(Math.sqrt(temp*temp-k3*k3)))/constant_g)+k2)));
+                        T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*(k3*((k1-(Math.sqrt(temp*temp-k3*k3)))/constant_g)+k4)));
+                        T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*((k1-(Math.sqrt(temp*temp-k3*k3)))/constant_g)));
+                        T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*(Math.acos(k3/temp))));
+                        T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*temp));
+                        enableDisableView(Table_Answers,false);
+                        RB.setEnabled(true);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            */
+        //}
+        //else if ("INCLINE".equals(type))
+        //{
+        //    numR=3;
+        //    makeAnswersRow(0,"Vs(t)","velocity");
+        //    makeAnswersRow(1,"s(t)","length");
+        //    makeAnswersRow(2,"t","time");
+            /*
+            B_Solve[0].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=0;
+                    try
+                    {
+                        temp=factorA1[0]*Double.valueOf(E_varInput[0].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*temp));
+                        if (temp>0)
+                        {
+                            temp1=(temp-k1)/(-constant_g*Math.sin(angle)-u1*constant_g*Math.cos(angle));
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*((-constant_g*Math.sin(angle)-u1*constant_g*Math.cos(angle))*(temp1*temp1/2)+k1*temp1+k3)));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp1));
+                        }
+                        else if (temp<0)
+                        {
+                            temp1=(temp-k2)/(-constant_g*Math.sin(angle)+u1*constant_g*Math.cos(angle));
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*((-constant_g*Math.sin(angle)+u1*constant_g*Math.cos(angle))*(temp1*temp1/2)+k2*temp1+k4)));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp1));
+                        }
+                        else
+                        {
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*peakS));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*peakTime));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[1].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=1;
+                    try
+                    {
+                        temp=factorA1[1]*Double.valueOf(E_varInput[1].getText().toString());
+                        double a1, a2;
+                        a1= (-constant_g*Math.sin(angle)-u1*constant_g*Math.cos(angle))/2;
+                        temp1=(-k1+Math.sqrt((k1*k1)-4*(a1)*(k3-temp)))/(2*a1);
+                        a2= (-constant_g*Math.sin(angle)+u1*constant_g*Math.cos(angle))/2;
+                        temp2=(-k2-Math.sqrt((k2*k2)-4*(a2)*(k4-temp)))/(2*a2);
+                        if (temp<peakS)
+                        {
+                            T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(2*a1*temp1+k1))+" or\n"+String.format("%.4f",(1/factorA2[0])*(2*a2*temp2+k2)));
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*temp));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp1)+" or\n"+String.format("%.4f",(1/factorA2[2])*temp2));
+                        }
+                        else if (temp==peakS)
+                        {
+                            T_varAnswer[0].setText("0");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*temp));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*peakTime));
+                        }
+                        else
+                        {
+                            T_varAnswer[0].setText("");
+                            T_varAnswer[1].setText("s(t) cannot exceed peak value.");
+                            T_varAnswer[2].setText("");
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[2].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=2;
+                    try
+                    {
+                        temp=factorA1[2]*Double.valueOf(E_varInput[2].getText().toString());
+                        if (temp<peakTime)
+                        {
+                            T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*((-constant_g*Math.sin(angle)-u1*constant_g*Math.cos(angle))*temp+k1)));
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*((-constant_g*Math.sin(angle)-u1*constant_g*Math.cos(angle))*(temp*temp/2)+k1*temp+k3)));
+                        }
+                        else if (temp>peakTime)
+                        {
+                            T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*((-constant_g*Math.sin(angle)+u1*constant_g*Math.cos(angle))*temp+k2)));
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*((-constant_g*Math.sin(angle)+u1*constant_g*Math.cos(angle))*(temp*temp/2)+k2*temp+k4)));
+                        }
+                        else
+                        {
+                            T_varAnswer[0].setText("0");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*peakS));
+                        }
+                        T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp));
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            */
+        //}
+        //else if ("SPRING_SIMPLE".equals(type))
+        //{
+        //    numR=2;
+        //    makeAnswersRow(0,"x","length");
+        //    makeAnswersRow(1,"F","force");
+        /*
+            B_Solve[0].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=0;
+                    try
+                    {
+                        temp=factorA1[0]*Double.valueOf(E_varInput[0].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*temp));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v1*(v2-temp)));
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[1].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=1;
+                    try
+                    {
+                        temp=factorA1[1]*Double.valueOf(E_varInput[1].getText().toString());
+                        T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*(v2-(temp/v1))));
+                        T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*temp));
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+        }
+        */
+        /*
+        else if ("SPRING".equals(type))
+        {
+            numR=7;
+            makeAnswersRow(0,"t","time");
+            makeAnswersRow(1,"x(t)","length");
+            makeAnswersRow(2,"v(t)","velocity");
+            makeAnswersRow(3,"a(t)","acceleration");
+            makeAnswersRow(4,"F(t)","force");
+            makeAnswersRow(5,"E-Kinetic(t)","energy");
+            makeAnswersRow(6,"E-Potential(t)","energy");
+            B_Solve[0].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=0;
+                    try
+                    {
+                        temp=factorA1[0]*Double.valueOf(E_varInput[0].getText().toString());
+                        if (option[1]==1)
+                        {
+                            T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*temp)+"\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.cos(v3*(temp-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.cos(v3*(temp-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.sin(v3*(temp-v5))*v4*v3*Math.sin(v3*(temp-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*v4*Math.cos(v3*(temp-v5))*v4*Math.cos(v3*(temp-v5))));
+                        }
+                        else if (option[1]==2)
+                        {
+                            T_varAnswer[0].setText(String.format("%.4f",(1/factorA2[0])*temp)+"\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.sin(v3*(temp-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.sin(v3*(temp-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.cos(v3*(temp-v5))*v4*v3*Math.cos(v3*(temp-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*v4*Math.sin(v3*(temp-v5))*v4*Math.sin(v3*(temp-v5))));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[1].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=1;
+                    try
+                    {
+                        temp=factorA1[1]*Double.valueOf(E_varInput[1].getText().toString());
+                        if (option[1]==1)
+                        {
+                            temp1=v5-Math.acos(temp/v4)/v3;
+                            temp2=v5+Math.acos(temp/v4)/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*temp));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp2-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v3*v3*temp));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v2*temp));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.sin(v3*(temp1-v5))*v4*v3*Math.sin(v3*(temp1-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*temp*temp));
+                        }
+                        else if (option[1]==2)
+                        {
+                            temp1=v5+Math.asin(temp/v4)/v3;
+                            temp2=v5-Math.asin(temp/v4)/v3+Math.PI/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*temp));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp2-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v3*v3*temp));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v2*temp));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.cos(v3*(temp1-v5))*v4*v3*Math.cos(v3*(temp1-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*temp*temp));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[2].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=2;
+                    try
+                    {
+                        temp=factorA1[2]*Double.valueOf(E_varInput[2].getText().toString());
+                        if (option[1]==1)
+                        {
+                            temp1=v5-Math.asin(temp/(v4*v3))/v3;
+                            temp2=v5+Math.asin(temp/(v4*v3))/v3+Math.PI/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp2-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.cos(v3*(temp2-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.cos(v3*(temp2-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*temp*temp));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*v4*Math.cos(v3*(temp1-v5))*v4*Math.cos(v3*(temp1-v5))));
+                        }
+                        else if (option[1]==2)
+                        {
+                            temp1=v5-Math.acos(temp/(v4*v3))/v3;
+                            temp2=v5+Math.acos(temp/(v4*v3))/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp2-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*temp));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.sin(v3*(temp2-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.sin(v3*(temp2-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*temp*temp));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*v4*Math.sin(v3*(temp1-v5))*v4*Math.sin(v3*(temp1-v5))));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[3].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=3;
+                    try
+                    {
+                        temp=factorA1[3]*Double.valueOf(E_varInput[3].getText().toString());
+                        if (option[1]==1)
+                        {
+                            temp1=v5-Math.acos(-temp/(v4*v3*v3))/v3;
+                            temp2=v5+Math.acos(-temp/(v4*v3*v3))/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-temp/(v3*v3))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp2-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*temp));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*v1*temp));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.sin(v3*(temp1-v5))*v4*v3*Math.sin(v3*(temp1-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*(temp/(v3*v3))*(temp/(v3*v3))));
+                        }
+                        else if (option[1]==2)
+                        {
+                            temp1=v5-Math.asin(temp/(v4*v3*v3))/v3;
+                            temp2=v5+Math.asin(temp/(v4*v3*v3))/v3+Math.PI/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-temp/(v3*v3))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp2-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*temp));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*v1*temp));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.cos(v3*(temp1-v5))*v4*v3*Math.cos(v3*(temp1-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*(temp/(v3*v3))*(temp/(v3*v3))));
+                        }
+
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[4].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=4;
+                    try
+                    {
+                        temp=factorA1[4]*Double.valueOf(E_varInput[4].getText().toString());
+                        if (option[1]==1)
+                        {
+                            temp1=v5-Math.acos(-temp/(v1*v4*v3*v3))/v3;
+                            temp2=v5+Math.acos(-temp/(v1*v4*v3*v3))/v3;
+                            T_varAnswer[0].setText(String.format("("+"%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-temp/(v1*v3*v3))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp2-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*temp/v1));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*temp));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.sin(v3*(temp1-v5))*v4*v3*Math.sin(v3*(temp1-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*(temp/(v1*v3*v3))*(temp/(v1*v3*v3))));
+                        }
+                        else if (option[1]==2)
+                        {
+                            temp1=v5-Math.asin(temp/(v1*v4*v3*v3))/v3;
+                            temp2=v5+Math.asin(temp/(v1*v4*v3*v3))/v3+Math.PI/v3;
+                            T_varAnswer[0].setText(String.format("("+"%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*(-temp/(v1*v3*v3))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp2-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*temp/v1));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*temp));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*0.5*v1*v4*v3*Math.cos(v3*(temp1-v5))*v4*v3*Math.cos(v3*(temp1-v5))));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*0.5*v2*(temp/(v1*v3*v3))*(temp/(v1*v3*v3))));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[5].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=5;
+                    try
+                    {
+                        temp=factorA1[5]*Double.valueOf(E_varInput[5].getText().toString());
+                        if (option[1]==1)
+                        {
+                            temp1=v5-Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            temp2=v5+Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            temp3=v5+Math.PI/v3-Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            temp4=v5+Math.PI/v3+Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+" or "+String.format("%.4f",(1/factorA2[0])*temp3)+" or "+String.format("%.4f",(1/factorA2[0])*temp4)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*temp));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*v6-temp));
+                        }
+                        else if (option[1]==2)
+                        {
+                            temp1=v5-Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            temp2=v5+Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            temp3=v5+Math.PI/v3-Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            temp4=v5+Math.PI/v3+Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            T_varAnswer[0].setText("("+String.format("%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+" or "+String.format("%.4f",(1/factorA2[0])*temp3)+" or "+String.format("%.4f",(1/factorA2[0])*temp4)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v3*v3*v4*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v3*v3*v4*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*temp));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*v6-temp));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+            B_Solve[6].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    qq=6;
+                    try
+                    {
+                        temp=factorA1[6]*Double.valueOf(E_varInput[6].getText().toString());
+                        if (option[1]==1)
+                        {
+                            temp1=v5-Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            temp2=v5+Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            temp3=v5+Math.PI/v3-Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            temp4=v5+Math.PI/v3+Math.acos(Math.sqrt(2*temp/v2)/v4)/v3;
+                            T_varAnswer[0].setText(String.format("("+"%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+" or "+String.format("%.4f",(1/factorA2[0])*temp3)+" or "+String.format("%.4f",(1/factorA2[0])*temp4)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*-v4*v3*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*v6-temp));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*temp));
+                        }
+                        else if (option[1]==2)
+                        {
+                            temp1=v5-Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            temp2=v5+Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            temp3=v5+Math.PI/v3-Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            temp4=v5+Math.PI/v3+Math.asin((Math.sqrt(2*temp/v1))/(v4*v3))/v3;
+                            T_varAnswer[0].setText(String.format("("+"%.4f",(1/factorA2[0])*temp1)+" or "+String.format("%.4f",(1/factorA2[0])*temp2)+" or "+String.format("%.4f",(1/factorA2[0])*temp3)+" or "+String.format("%.4f",(1/factorA2[0])*temp4)+")\n+"+String.format("%.4f",(1/factorA2[0])*2*Math.PI/v3)+"N, N is any integer");
+                            T_varAnswer[1].setText(String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[1])*v4*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[2].setText(String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[2])*v4*v3*Math.cos(v3*(temp4-v5))));
+                            T_varAnswer[3].setText(String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[3])*-v4*v3*v3*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[4].setText(String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.sin(v3*(temp1-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.sin(v3*(temp2-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.sin(v3*(temp3-v5)))+" or "+String.format("%.4f",(1/factorA2[4])*-v1*v4*v3*v3*Math.sin(v3*(temp4-v5))));
+                            T_varAnswer[5].setText(String.format("%.4f",(1/factorA2[5])*v6-temp));
+                            T_varAnswer[6].setText(String.format("%.4f",(1/factorA2[6])*temp));
+                        }
+                        enableDisableView(Table_Answers,false);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                }
+            });
+        }
+        */

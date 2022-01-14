@@ -1,0 +1,46 @@
+S3
+C6-14-CATEGORY 1: ANGLE/MASS/FORCE
+P2-Angle of incline and mass of object.
+Angle:
+angle
+Mass:
+mass
+P2-Angle of incline and force parallel to incline.
+Angle:
+angle
+Force:
+force
+P2-Angle of incline and force normal to incline.
+Angle:
+angle
+Force:
+force
+P2-Mass of object and force parallel to incline.
+Mass:
+mass
+Force:
+force
+P2-Mass of object and force normal to incline.
+Mass:
+mass
+Force:
+force
+P2-Force parallel to incline and force normal to incline.
+Force Parallel:
+force
+Force Normal:
+force
+C2-14-CATEGORY 2: STATIC FRICTION
+P1-Static coefficient of friction.
+Coefficient (unitless):
+unitless
+P1-Force required to start object moving.
+Force:
+force
+C2-14-CATEGORY 3: KINETIC FRICTION
+P1-Kinetic coefficient of friction.
+Coefficient (unitless):
+unitless
+P1-Force required to keep object moving.
+Force:
+force

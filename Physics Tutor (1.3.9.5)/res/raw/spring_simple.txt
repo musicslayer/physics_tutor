@@ -1,0 +1,15 @@
+S2
+C2-14-CATEGORY 1: SPRING INFORMATION
+P1-Spring constant.
+Spring Constant (N/m):
+unitless
+P2-Position of mass and magnitude of force on mass.
+Position:
+length
+Force:
+force
+C1-13-CATEGORY 2: EQUILIBRIUM POSITION
+P1-Equilibrium position of mass.
+Position:
+length
+E

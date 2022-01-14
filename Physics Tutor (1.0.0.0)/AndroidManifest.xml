@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.androidbook.physicstutor"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name=".PhysicsIntroActivity" android:screenOrientation="portrait">
+            <!-- <activity android:name="PhysicsAssumptionsActivity"></activity><activity android:name="PhysicsAssumptionsActivity"></activity> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<activity android:name="PhysicsAdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation"></activity>
+<activity android:name="PhysicsAssumptionsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation"></activity>
+<activity android:name="PhysicsHelpActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation"></activity>
+<activity android:name="PhysicsProblemsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation"></activity>
+<activity android:name="PhysicsSettingsActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation"></activity>
+<activity android:name="PhysicsSolverActivity" android:configChanges="keyboardHidden|orientation"></activity>
+<activity android:name="PhysicsProjectileActivity" android:configChanges="keyboardHidden|orientation"></activity>
+
+<!-- The application's publisher ID assigned by AdMob --> 
+<meta-data android:value="a14debddae9593b" android:name="ADMOB_PUBLISHER_ID" /> 
+         
+<!-- AdMobActivity definition --> 
+<activity android:name="com.admob.android.ads.AdMobActivity"  
+android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+android:configChanges="orientation|keyboard|keyboardHidden" /> 
+ 
+<!-- Track Market installs -->           
+<receiver android:name="com.admob.android.ads.analytics.InstallReceiver" 
+android:exported="true"> 
+ <intent-filter> 
+   <action android:name="com.android.vending.INSTALL_REFERRER" /> 
+ </intent-filter> 
+</receiver> 
+<meta-data android:value="false" android:name="ADMOB_ALLOW_LOCATION_FOR_ADS"/>
+
+    
+</application>
+
+<!-- AdMob SDK requires Internet permission --> 
+  <uses-permission android:name="android.permission.INTERNET" /> 
+
+</manifest> 

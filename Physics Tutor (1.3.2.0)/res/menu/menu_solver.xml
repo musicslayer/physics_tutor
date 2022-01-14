@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+xmlns:android="http://schemas.android.com/apk/res/android"> 
+	<item
+	android:id="@+id/quit_menu_item" 
+	android:title="QUIT" 
+	android:icon="@android:drawable/ic_menu_preferences">
+	</item>
+	<item 
+	android:id="@+id/edit_inputs_menu_item" 
+	android:title="EDIT INPUTS" 
+	android:icon="@android:drawable/ic_menu_preferences">
+	</item>
+</menu>

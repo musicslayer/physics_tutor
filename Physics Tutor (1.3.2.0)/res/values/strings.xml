@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Physics Tutor</string>
+    <string name="prompt">Change value to:</string>
+    <string name="prompt_ad">Ad Choice:</string>
+    <string name="prompt_answer">Answer Layout:</string>
+<string name="prompt_length">Unit (length):</string>
+<string name="prompt_time">Unit (time):</string>
+<string name="prompt_velocity">Unit (velocity):</string>
+<string name="prompt_angle">Unit (angle):</string>
+<string name="prompt_mass">Unit (mass):</string>
+<string name="prompt_force">Unit (force):</string>
+</resources>

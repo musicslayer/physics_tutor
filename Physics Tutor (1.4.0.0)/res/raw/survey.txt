@@ -1,0 +1,41 @@
+S6
+Q5-Which solver do you feel is MOST useful?
+Projectile
+Resultant Vectors
+Incline
+Spring
+Circuit
+Q5-Which solver do you feel is LEAST useful?
+Projectile
+Resultant Vectors
+Incline
+Spring
+Circuit
+Q6-Which choice about this app do you agree with the most?
+100% PURE AWESOMENESS!
+Useful and nifty.
+I don't need a tutor.
+Helpful but confusing.
+It doesn't address my needs.
+TOTALLY STUPID IDEA!
+Q6-Are you happy that this app is ad free?
+OMG MY LIFE IS COMPLETE!!!
+Rock on! I enjoy a completely free app.
+The app is at least a little better now.
+It's OK I guess.
+Meh...
+I really don't care.
+Q6-Which subject would you like help in next?
+Point charges/masses
+Rotational/centripetal motion
+Gases/pressure
+Collisions
+Pulleys
+Improve Existing Subjects
+Q6-Does this app look good on your device? For example, is it zoomed in just the right amount?
+Yes. I have a phone.
+Yes. I have a tablet.
+Yes. I have another device.
+No. I have a phone.
+No. I have a tablet.
+No. I have another device.

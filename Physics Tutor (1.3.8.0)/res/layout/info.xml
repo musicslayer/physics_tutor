@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/LinearLayout01"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="250dp">
+
+        <Button
+        android:id="@+id/Button_Proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROCEED"/>
+
+        <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+            <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+                <TextView
+                android:id="@+id/TextView_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+                <TextView
+                android:id="@+id/TextView_Constants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+                <TextView
+                android:id="@+id/TextView_Notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ScrollView
+    android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+            <ImageView
+            android:id="@+id/ImageView_Helper"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:adjustViewBounds="true"/>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

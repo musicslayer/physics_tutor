@@ -1,0 +1,41 @@
+S3
+C1-14-CATEGORY 1: KINETIC FRICTION
+P1-Kinetic coefficient of friction.
+Coefficient (unitless):
+unitless
+C4-14-CATEGORY 2: POSITION/ANGLE
+P3-Position along incline at specific time, and angle of incline.
+Position:
+length
+Time:
+time
+Angle
+angle
+P3-X-position at specific time, and angle of incline.
+X-position:
+length
+Time:
+time
+Angle
+angle
+P3-Y-position at specific time, and angle of incline.
+Y-position:
+length
+Time:
+time
+Angle
+angle
+P3-X-position and Y-position at specific (same) time.
+X-position:
+length
+Y-position:
+length
+Time:
+time
+C1-14-CATEGORY 3: VELOCITY
+P2-Velocity along incline at specific time.
+Velocity:
+velocity
+Time:
+time
+E
